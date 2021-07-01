@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creditos</title>
+</head>
+<body>
+
+    <div >
+            <div >
+                <table >
+                    <thead>
+                    <tr>
+                        <th >Monto</th>
+                        <th >Estado</th>
+                        <th >Cliente</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for credito in creditos %}
+                            <tr>
+                                <td>{{credito.monto}}</td>
+                                <td >{{credito.estado}}</td>
+                                <td >{{credito.cliente}}</td>
+                                <td><a  href={% url 'ver-credito' credito_id=credito.id %}">
+                                    Ver credito
+                                </a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</body>
+</html>

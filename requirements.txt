@@ -1,0 +1,4 @@
+Django == 3.2.3
+python == 3.9.2
+psycopg2 == 2.8.6
+Pycharm == 2020.3.3

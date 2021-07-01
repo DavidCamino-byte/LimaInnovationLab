@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credito</title>
+</head>
+<body>
+
+    <div >
+        <h2>Información del credito</h2>
+
+        <div >
+            <div >
+                <h5 >Monto</h5>
+            </div>
+            <div >
+                <h6>{{credito.monto}}</h6>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h5>Estado</h5>
+            </div>
+            <div >
+                <h6>{{credito.estado}}</h6>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h5>Nombre completo</h5>
+            </div>
+            <div>
+                <h6>{{ credito.cliente.first_name credito.cliente.last_name}}</h6>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h5>SBS</h5>
+            </div>
+            <div>
+                <h6 class="h6">{{credito.cliente.sbs}}</h6>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h5>Hora de salida</h5>
+            </div>
+            <div>
+                <h6>{{credito.cliente.riesgo_sentinel}}</h6>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h5>Hora de salida</h5>
+            </div>
+            <div>
+                <h6>{{credito.cliente}}</h6>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <h5 ><td><a href="{% url 'aprobar-credito' credito_id=credito.id %}" > Aproba</a></td></h5>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h5>
+                    <td><a href="{% url 'desaprobar-credito' credito_id=credito.id %}">Denegar</a></td></h5>
+            </div>
+        </div>
+    </div>
+        <hr>
+</body>
+</html>
